@@ -1,0 +1,27 @@
+{
+  "name": "snippet-stream",
+  "version": "0.0.0",
+  "description": "Split a stream of JS source code into parsable snippets",
+  "main": "index.js",
+  "dependencies": {
+    "snippetify": "^0.2.1",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "^5.3.1",
+    "tape": "^4.2.2"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/snippet-stream.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/snippet-stream/issues"
+  },
+  "homepage": "https://github.com/mafintosh/snippet-stream"
+}
