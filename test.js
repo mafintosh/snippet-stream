@@ -22,3 +22,24 @@ tape('splits into snippets', function (t) {
     t.end()
   })
 })
+
+tape('partial valid expression', function (t) {
+  var s = snippets()
+
+  s.write('var a = 1\n')
+  s.write('foo\n')
+  s.write('()\n')
+  s.write('var b = 2')
+  s.end()
+
+  var expected = ['var a = 1\n', 'foo\n()\n', 'var b = 2']
+
+  s.on('data', function (data) {
+    t.same(data, expected.shift(), 'snippet match expected output')
+  })
+
+  s.on('end', function () {
+    t.same(expected.length, 0, 'no more snippets')
+    t.end()
+  })
+})

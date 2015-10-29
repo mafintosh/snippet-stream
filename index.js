@@ -17,7 +17,10 @@ module.exports = function () {
       return cb()
     }
 
-    for (var i = 0; i < raws.length - 1; i++) { // -1 since the last one might be a partial expression
+    var partials = 1
+    while (raws.length - partials >= 0 && raws.length && !raws[raws.length - partials]) partials++
+
+    for (var i = 0; i < raws.length - partials; i++) {
       buffer = buffer.slice(raws[i].length + 1) // +1 for newline
       this.push(raws[i] + '\n')
     }
