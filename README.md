@@ -6,6 +6,8 @@ Split a stream of JS source code into parsable snippets
 npm install snippet-stream
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/snippet-stream.svg?style=flat)](http://travis-ci.org/mafintosh/snippet-stream)
+
 ## Usage
 
 ``` js
