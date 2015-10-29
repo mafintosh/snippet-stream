@@ -1,6 +1,6 @@
 {
   "name": "snippet-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Split a stream of JS source code into parsable snippets",
   "main": "index.js",
   "dependencies": {
