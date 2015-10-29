@@ -17,7 +17,7 @@ module.exports = function () {
       return cb()
     }
 
-    for (var i = 0; i < raws.length - 1; i++) {
+    for (var i = 0; i < raws.length - 1; i++) { // -1 since the last one might be a partial expression
       buffer = buffer.slice(raws[i].length + 1) // +1 for newline
       this.push(raws[i] + '\n')
     }

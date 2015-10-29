@@ -8,7 +8,7 @@ stream.write('var a = 1\n')
 stream.write('function foo () {\n')
 stream.write(' return a + 1\n')
 stream.write('}\n')
-stream.write('foo()')
+stream.write('console.log(foo())')
 stream.end()
 
 stream.on('data', function (data) {
